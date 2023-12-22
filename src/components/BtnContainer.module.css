@@ -1,0 +1,20 @@
+.BtnGroup{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .Button{
+    background-color: rgb(241, 83, 83);
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+  }
+  .Button:hover{
+    background: rgb(243, 238, 238);
+    color: red;
+    transition: all 5s background;
+  }
+  

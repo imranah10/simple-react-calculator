@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./App.module.css";
+import Display from "./components/Display";
+import BtnContainer from "./components/BtnContainer";
+import Appname from "./components/Appname";
+import { useState } from "react";
+
 
 function App() {
+  const[inpval,setInpval]=useState('')
+  const onbtnclick=(buttonText)=>{
+    if (buttonText==='C'){
+      setInpval('')
+    }
+    else if(buttonText==='='){
+      const result=eval(inpval)
+      setInpval(result)
+    }
+    else{
+      const DisValue=inpval+buttonText;
+      setInpval(DisValue)
+    }
+
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.calculator}>
+      <Appname />
+      <Display dispval={inpval} />
+      <BtnContainer onbtnclick={onbtnclick} />
     </div>
   );
 }

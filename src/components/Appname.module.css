@@ -1,0 +1,10 @@
+.Appname{
+    color: rgb(241, 83, 83);
+    font-weight: 800;
+    font-size: 2.3rem; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    
+    bottom: 85%;
+
+}
